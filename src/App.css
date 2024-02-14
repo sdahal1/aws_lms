@@ -252,3 +252,24 @@ section{
   font-size: .8rem;
 }
 
+.bugalert{
+  background-color: rgb(196, 134, 134);
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.bugalert button{
+  background-color: #abd823;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
