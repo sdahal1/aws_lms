@@ -90,6 +90,7 @@ const Basic = () => {
           ))}
         </div>
         <div className='p-2 border main-content'>
+          <em>Note: You can find the code solution here: <a href="https://github.com/sdahal1/aws_lab_serverless_final">Serverless APP Solution</a></em>
         <Routes>
           <Route path={"/introduction-and-prerequisites/learning-objectives"} element={<LearningObjectives/>} />
           <Route path={"/introduction-and-prerequisites/prerequisites"} element={<Prerequisites/>} />
