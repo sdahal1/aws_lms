@@ -32,7 +32,7 @@ const ChallengeMode = () => {
       ]
     },
     {
-      num: 2, 
+      num: 2,
       title: "Setup",
       subchapters: [
         "AWS Account - IAM User",
@@ -41,7 +41,8 @@ const ChallengeMode = () => {
         "Email Verification in SES",
       ]
     },
-    { num: 3, 
+    {
+      num: 3,
       title: "Phase1: Monolith",
       subchapters: [
         "Create Hello World with SAM",
@@ -52,7 +53,8 @@ const ChallengeMode = () => {
         "Improvements and Challenges",
       ]
     },
-    { num: 4, 
+    {
+      num: 4,
       title: "Phase2: Scalable and Asynchronous",
       subchapters: [
         "Simple Queue Service (SQS)",
@@ -69,42 +71,43 @@ const ChallengeMode = () => {
 
 
   return (
-      <div className="d-flex">
-        <div className="nav flex-column me-3 nav-bg p-2 side-bar">
-          {CHAPTERS.map((chapter, index) => (
-            <>
+    <div className="d-flex">
+      <div className="nav flex-column me-3 nav-bg p-2 side-bar">
+        {CHAPTERS.map((chapter, index) => (
+          <>
             <p key={index} className="text-light text-decoration-none nav-chapter-title" >- {chapter.title}</p>
             {chapter.subchapters.map((subchapter, index) => (
               <Link to={`/challenge/${formatTitle(chapter.title)}/${formatTitle(subchapter)}`} key={index} className="nav-subchapter-title text-light text-decoration-none">{subchapter}</Link>
             )
             )}
-            </>
-          ))}
-        </div>
-        <div className='p-2 border main-content'>
-        <em>Note: You can find the code solution here: <a href="https://github.com/sdahal1/aws_lab_serverless_final">Serverless APP Solution</a></em>
-        <Routes>
-          <Route path={"/introduction-and-prerequisites/learning-objectives"} element={<LearningObjectives/>} />
-          <Route path={"/introduction-and-prerequisites/prerequisites"} element={<Prerequisites/>} />
-          <Route path={"/introduction-and-prerequisites/architecture-overview"} element={<ArchitectureOverview/>} />
-          <Route path={"/introduction-and-prerequisites/real-world-scenario"} element={<RealWorldScenario/>} />
-          <Route path={"/setup/aws-account---iam-user"} element={<AWSAccount></AWSAccount>} />
-          <Route path={"/setup/cloud9-ide-setup"} element={<Cloud9/>} />
-          <Route path={"/setup/email-verification-in-ses"} element={<EmailVerification/>} />
-          <Route path={"/setup/aws-sam"} element={<SAM/>} />
-          <Route path={"/phase1:-monolith/create-hello-world-with-sam"} element={<HelloWorld/>} />
-          <Route path={"/phase1:-monolith/create-new-user"} element={<NewUser/>} />
-          <Route path={"/phase1:-monolith/translation-of-messages"} element={<TranslateMessages/>} />
-          <Route path={"/phase1:-monolith/text-to-speech"} element={<TextToSpeech/>} />
-          <Route path={"/phase1:-monolith/send-email"} element={<SendEmail/>} />
-          <Route path={"/phase1:-monolith/improvements-and-challenges"} element={<ImprovementsAndChallenges/>} />
-          <Route path={"/phase2:-scalable-and-asynchronous/simple-queue-service-(sqs)"} element={<SQS/>} />
-          <Route path={"/phase2:-scalable-and-asynchronous/updating-our-application-to-use-sqs"} element={<UpdateAPP/>} />
-          <Route path={"/phase2:-scalable-and-asynchronous/improvements-and-challenges"} element={<MicroImprovements/>} />
-          <Route path={"/phase2:-scalable-and-asynchronous/mass-alert"} element={<MassAlert/>} />
-        </Routes>
-        </div>
+          </>
+        ))}
       </div>
+      <div className='p-2 border main-content'>
+        <h1>Challenge Mode:</h1>
+        <em>Note: You can find the code solution hereee: <a href="https://github.com/sdahal1/aws_lab_serverless_final">Serverless APP Solution</a></em>
+        <Routes>
+          <Route path={"/introduction-and-prerequisites/learning-objectives"} element={<LearningObjectives />} />
+          <Route path={"/introduction-and-prerequisites/prerequisites"} element={<Prerequisites />} />
+          <Route path={"/introduction-and-prerequisites/architecture-overview"} element={<ArchitectureOverview />} />
+          <Route path={"/introduction-and-prerequisites/real-world-scenario"} element={<RealWorldScenario />} />
+          <Route path={"/setup/aws-account---iam-user"} element={<AWSAccount></AWSAccount>} />
+          <Route path={"/setup/cloud9-ide-setup"} element={<Cloud9 />} />
+          <Route path={"/setup/email-verification-in-ses"} element={<EmailVerification />} />
+          <Route path={"/setup/aws-sam"} element={<SAM />} />
+          <Route path={"/phase1:-monolith/create-hello-world-with-sam"} element={<HelloWorld />} />
+          <Route path={"/phase1:-monolith/create-new-user"} element={<NewUser />} />
+          <Route path={"/phase1:-monolith/translation-of-messages"} element={<TranslateMessages />} />
+          <Route path={"/phase1:-monolith/text-to-speech"} element={<TextToSpeech />} />
+          <Route path={"/phase1:-monolith/send-email"} element={<SendEmail />} />
+          <Route path={"/phase1:-monolith/improvements-and-challenges"} element={<ImprovementsAndChallenges />} />
+          <Route path={"/phase2:-scalable-and-asynchronous/simple-queue-service-(sqs)"} element={<SQS />} />
+          <Route path={"/phase2:-scalable-and-asynchronous/updating-our-application-to-use-sqs"} element={<UpdateAPP />} />
+          <Route path={"/phase2:-scalable-and-asynchronous/improvements-and-challenges"} element={<MicroImprovements />} />
+          <Route path={"/phase2:-scalable-and-asynchronous/mass-alert"} element={<MassAlert />} />
+        </Routes>
+      </div>
+    </div>
   )
 }
 

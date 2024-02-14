@@ -42,15 +42,15 @@ const Home = () => {
               <p className="card-text text-center m-3">You will master your troubleshooting skills.</p>
             </div>
           </div>
-          {/* <div className="card nav-bg text-light">
+          <div className="card nav-bg text-light">
             <img className="card-img-top" src="" alt="" />
             <div className="card-body text-center">
               <h5 className="card-title">Self Sufficient</h5>
               <h6 className='card-subtitle mb-2'>Est: 2 hours</h6>
               <Link to="/advanced/introduction-and-prerequisites/real-world-scenario" className="btn btn-primary m-2 text-light">Start</Link>
-              <p className="card-text text-start">You will be challenged to complete lab with guiding questions and hints. Minimal hand-holding.</p>
+              <p className="card-text text-start">You will be challenged to complete lab with minimal code given.</p>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
   )

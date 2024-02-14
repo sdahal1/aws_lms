@@ -58,10 +58,10 @@ const Cloud9 = () => {
       <div className='d-flex m-2 justify-content-end align-items-center'>
         {/* next and previous buttons */}
         <div>
-          <Link to="/challenge/setup/aws-account---iam-user" className="btn btn-primary">Previous</Link>
+          <Link to="/advanced/setup/aws-account---iam-user" className="btn btn-primary">Previous</Link>
         </div>
         <div>
-          <Link to="/challenge/setup/aws-sam" className="btn btn-warning m-2">Next</Link>
+          <Link to="/advanced/setup/aws-sam" className="btn btn-warning m-2">Next</Link>
         </div>
       </div>
     </div>

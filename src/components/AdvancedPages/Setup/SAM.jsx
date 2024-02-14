@@ -46,10 +46,10 @@ sam --version
       <div className='d-flex m-2 justify-content-end align-items-center'>
         {/* next and previous buttons */}
         <div>
-          <Link to="/challenge/setup/cloud9-ide-setup" className="btn btn-primary">Previous</Link>
+          <Link to="/advanced/setup/cloud9-ide-setup" className="btn btn-primary">Previous</Link>
         </div>
         <div>
-          <Link to="/challenge/setup/email-verification-in-ses" className="btn btn-warning m-2">Next</Link>
+          <Link to="/advanced/setup/email-verification-in-ses" className="btn btn-warning m-2">Next</Link>
         </div>
       </div>
     </div>
