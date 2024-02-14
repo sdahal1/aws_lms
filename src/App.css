@@ -1,38 +1,254 @@
-.App {
-  text-align: center;
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+        Purple: hsl(250, 66%, 75%)
+        Blue: hsl(207, 90%, 72%)
+        Pink: hsl(356, 66%, 75%)
+        Teal: hsl(174, 63%, 62%)
+
+  First set of colors
+  --first-hue: 250;
+  --sat: 66%;
+  --lig: 75%;
+  --second-hue: 219;
+  */
+  --first-hue: 207;
+  --sat: 90%;
+  --lig: 72%;
+  --second-hue: 219;
+
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% */
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --text-color-light: hsl(var(--second-hue), 4%, 55%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+
+  
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+  /* --normal-font-size: 1.3rem;
+  --small-font-size: 1.1rem;
+  --smaller-font-size: 1rem; */
+  
+
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1.3rem;
+    --small-font-size: 1.1rem;
+    --smaller-font-size: 1rem;
+    --tiny-font-size: .8rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px dotted red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button{
+  font-weight: 600;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .2s; 
+  /* for light mode animation */
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: .4rem;
+}
+
+.light-font-color {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-bg{
+  background-color: rgb(35,47,62);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lab-modes{
+  gap: 2rem;
 }
+
+.lab-modes > div{
+  border: 1px solid var(--text-color);
+  /* flex: 1; */
+  width: 28%;
+
+}
+
+/* on hover of .lab-modes>div */
+.lab-modes > div:hover{
+  background-color: var(--first-color);
+  color: var(--body-color);
+  /* pop out */
+  transform: scale(1.1);
+  transition: .2s;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-chapter-title{
+  font-size: var(--normal-font-size);
+  margin-bottom: .5rem;
+}
+
+.nav-subchapter-title{
+  font-size: var(--smaller-font-size);
+  padding-left: 3rem;
+  margin-bottom: .5rem;
+  /* italic */
+  font-style: italic;
+}
+
+/* navsubchaptertitle on hover make bg lighter */
+.nav-subchapter-title:hover{
+  background-color: var(--first-color);
+  color: var(--body-color);
+  transition: .2s;
+}
+
+.first-color{
+  background-color: var(--first-color);
+}
+
+.side-bar{
+  flex: 1;
+}
+.main-content{
+  flex:4;
+}
+
+.architecture-diagram{
+
+}
+
+ul li, ol li{
+  margin-bottom: 1rem;
+}
+
+section{
+  margin-bottom: 3rem;
+}
+
+.important-alert{
+  background-color: #FDFCE8;
+  color: var(--body-color);
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 5px;
+}
+
+.important-alert i{
+  color: #FFD700;
+  margin-right: .5rem;
+}
+
+.note{
+  background-color: rgb(229, 190, 118);
+  color: var(--body-color);
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.width-100{
+  max-width: 100%;
+}
+
+
+.challenge{
+  background-color:#e0d598;
+  color: black;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.challenge h3{
+  margin-bottom: 1rem;
+  color: black;
+  text-align: center;
+}
+
+.hints, .answers{
+  background-color: #e2e0c2;
+  color: black;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 5px;
+  /* width: 500px; */
+  text-align: center;
+}
+
+.answers img{
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+#width-codeblock{
+  width: min-content
+}
+
+.codeblock{
+  font-size: .8rem;
+}
+
