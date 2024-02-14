@@ -28,6 +28,7 @@ const Home = () => {
               <h6 className='card-subtitle mb-2'>Est: 1 hour</h6>
               <Link to="/basic/introduction-and-prerequisites/real-world-scenario" className="btn btn-primary m-2 text-light">Start</Link>
               <p className="card-text text-center m-3">Follow the step-by-step instructions with full code and explanations provided.</p>
+              <p className="card-text text-center m-3">Includes stretch challenges to re-inforce your learning.</p>
             </div>
           </div>
           <div className="card nav-bg text-light">
