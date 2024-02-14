@@ -45,10 +45,10 @@ const Home = () => {
           <div className="card nav-bg text-light">
             <img className="card-img-top" src="" alt="" />
             <div className="card-body text-center">
-              <h5 className="card-title">Self Sufficient</h5>
+              <h3 className="card-title">Self Sufficient</h3>
               <h6 className='card-subtitle mb-2'>Est: 2 hours</h6>
               <Link to="/advanced/introduction-and-prerequisites/real-world-scenario" className="btn btn-primary m-2 text-light">Start</Link>
-              <p className="card-text text-start">You will be challenged to complete lab with minimal code given.</p>
+              <p className="card-text text-start">You will be challenged to complete lab with minimal code given. We will provide prompts and comments that you will have to figure out how to code it.</p>
             </div>
           </div>
         </div>
