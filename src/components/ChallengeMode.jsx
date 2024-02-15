@@ -85,7 +85,7 @@ const ChallengeMode = () => {
       </div>
       <div className='p-2 border main-content'>
         <h1>Challenge Mode:</h1>
-        <em>Note: You can find the code solution hereee: <a href="https://github.com/sdahal1/aws_lab_serverless_final">Serverless APP Solution</a></em>
+        <em>Note: You can find the code solution here: <a href="https://github.com/sdahal1/aws_lab_serverless_final">Serverless APP Solution</a></em>
         <Routes>
           <Route path={"/introduction-and-prerequisites/learning-objectives"} element={<LearningObjectives />} />
           <Route path={"/introduction-and-prerequisites/prerequisites"} element={<Prerequisites />} />
